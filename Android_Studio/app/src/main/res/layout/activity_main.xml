@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="0dp"
+    android:weightSum="35"
+    android:background="#84f"
+    android:orientation="vertical">
+
+    <!-- View: 화면 외곽 설정 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:textColor="#fff"
+        android:textSize="28dp"
+        android:text="로 비"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="32"
+        android:weightSum="34"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- 게임 화면 시작 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="32"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="14"
+                android:layout_marginBottom="3dp"
+                android:background="#fff"
+                android:orientation="horizontal"
+                android:weightSum="9"
+                android:gravity="center">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="7"
+                    android:weightSum="5"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:weightSum="8"
+                        android:gravity="center">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:text="방 이름"
+                            android:textSize="24dp"
+                            android:gravity="center"/>
+                        <EditText
+                            android:id="@+id/editText_room"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="5"/>
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:weightSum="9"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:text="시간:"
+                            android:textSize="24dp"
+                            android:gravity="left|center"/>
+                        <RadioButton
+                            android:id="@+id/radio_time1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:text="30초"
+                            android:textSize="20dp"/>
+                        <RadioButton
+                            android:id="@+id/radio_time2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:text="60초"
+                            android:textSize="20dp"/>
+                    </RadioGroup>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:weightSum="10"
+                        android:gravity="center">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:text="인원:"
+                            android:textSize="24dp"
+                            android:gravity="left|center"/>
+                        <TextView
+                            android:id="@+id/sliderText"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="8"
+                            android:textSize="24dp"
+                            android:gravity="center"/>
+                        <com.google.android.material.slider.Slider
+                            android:id="@+id/slider"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="6"
+                            android:valueFrom="2"
+                            android:valueTo="8"
+                            android:value="8"
+                            android:stepSize="1"/>
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup_question"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:weightSum="8"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:text="문제:"
+                            android:textSize="24dp"
+                            android:gravity="center"/>
+                        <RadioButton
+                            android:id="@+id/radio_question1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:text="1"
+                            android:textSize="20dp"/>
+                        <RadioButton
+                            android:id="@+id/radio_question2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:text="2"
+                            android:textSize="20dp"/>
+                        <RadioButton
+                            android:id="@+id/radio_question3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:text="3"
+                            android:textSize="20dp"/>
+                    </RadioGroup>
+                    <Button
+                        android:id="@+id/button_create"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="방 생성"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="12"
+                android:gravity="center"
+                android:background="#fff">
+                <ListView
+                    android:id="@+id/listView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginBottom="3dp"/>
+                <ImageView
+                    android:id="@+id/loadingImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/loading_background"
+                    android:scaleType="centerInside"
+                    android:layout_centerInParent="true"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:layout_marginBottom="3dp"
+                android:orientation="horizontal"
+                android:weightSum="9"
+                android:gravity="center"
+                android:background="#95f">
+
+                <Button
+                    android:id="@+id/button_join"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:textSize="22dp"
+                    android:text="게임 참가" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:layout_marginBottom="3dp"
+                android:orientation="horizontal"
+                android:weightSum="9"
+                android:gravity="center"
+                android:background="#95f">
+
+                <Button
+                    android:id="@+id/button_refresh"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:textSize="22dp"
+                    android:text="새로고침" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+</LinearLayout>

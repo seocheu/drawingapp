@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="0dp"
+    android:weightSum="35"
+    android:background="#84f"
+    android:orientation="vertical">
+
+    <!-- View: 화면 외곽 설정 -->
+    <TextView
+        android:id="@+id/textView_top"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:textColor="#fff"
+        android:textSize="28dp"
+        android:text="(다른 유저) 차례"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="32"
+        android:weightSum="34"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- 게임 화면 시작 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="32"
+            android:orientation="vertical">
+            <!-- 이미지 -->
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="17"
+                android:background="#fff"
+                android:scaleType="fitCenter"
+                android:src="@drawable/whitecanvas"
+                android:layout_marginBottom="3dp"/>
+            <LinearLayout
+                android:id="@+id/middle_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="12"
+                android:weightSum="3"
+                android:layout_marginBottom="3dp">
+
+                <ListView
+                    android:id="@+id/listView_user"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#fff"
+                    android:layout_marginRight="3dp"/>
+                <ListView
+                    android:id="@+id/listView_Chat"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="#fff"/>
+
+            </LinearLayout>
+
+            <!-- 에딧 텍스트와 버튼-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:orientation="horizontal"
+                android:weightSum="9"
+                android:background="#fff">
+                <EditText
+                    android:id="@+id/editText"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="7" />
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="전송" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+</LinearLayout>

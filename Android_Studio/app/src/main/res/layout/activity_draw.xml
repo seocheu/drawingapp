@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="0dp"
+    android:weightSum="35"
+    android:background="#84f"
+    android:orientation="vertical">
+
+    <!-- View: 화면 외곽 설정 -->
+    <TextView
+        android:id="@+id/textView_top"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:textColor="#fff"
+        android:textSize="28dp"
+        android:text="(현재 유저) 차례"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="32"
+        android:weightSum="34"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- 게임 화면 시작 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="32"
+            android:orientation="vertical">
+            <!-- 이미지 -->
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="17"
+                android:background="#fff"
+                android:src="@drawable/whitecanvas"
+                android:layout_marginBottom="3dp"/>
+            <!-- 색 상 -->
+            <LinearLayout
+                android:id="@+id/color_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:weightSum="9"
+                android:layout_marginBottom="3dp">
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#fff"/>
+                <View
+                    android:id="@+id/color_black"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/black"/>
+                <View
+                    android:id="@+id/color_red"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#f00"/>
+                <View
+                    android:id="@+id/color_orange"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#f80"/>
+                <View
+                    android:id="@+id/color_yellow"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#ff0"/>
+                <View
+                    android:id="@+id/color_green"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#0c0"/>
+                <View
+                    android:id="@+id/color_skyblue"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#0bf"/>
+                <View
+                    android:id="@+id/color_blue"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#00f"/>
+                <View
+                    android:id="@+id/color_purple"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#70f"/>
+            </LinearLayout>
+            <!-- 색상 끝 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                android:weightSum="3"
+                android:layout_marginBottom="3dp">
+
+                <ListView
+                    android:id="@+id/listView_user"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#fff"
+                    android:layout_marginRight="3dp" />
+                <ListView
+                    android:id="@+id/listView_Chat"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="#fff"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+</LinearLayout>
